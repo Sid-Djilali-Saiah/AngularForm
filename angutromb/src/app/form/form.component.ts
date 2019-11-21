@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from "@angular/forms";
+import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 
 @Component({
   selector: 'app-form',
@@ -7,18 +7,39 @@ import { FormBuilder, FormGroup } from "@angular/forms";
   styleUrls: ['./form.component.css']
 })
 export class FormComponent implements OnInit {
+  visible = true;
+  selectable = true;
+  removable = true;
+  addOnBlur = true;
   myForm: FormGroup;
   imageURL: string;
+  GradeArray: any = ['B1', 'B2', 'B3', 'I1', 'I2'];
 
   constructor(public fb: FormBuilder) { }
 
   ngOnInit() {
-    this.fb.group({
+    this.myForm = this.fb.group({
       avatar: [null],
-      firstName: [''],
-      lastName: [''],
-      dob: ['']
+      firstName: ['', [Validators.required]],
+      lastName: ['', [Validators.required]],
+      email: ['', [Validators.required, Validators.email]],
+      gender: [''],
+      dob: ['', [Validators.required]],
+      grade: ['', [Validators.required]]
     })
+  }
+
+  // Date
+  date(e) {
+    var convertDate = new Date(e.target.value).toISOString().substring(0, 10);
+    this.myForm.get('dob').setValue(convertDate, {
+      onlyself: true
+    })
+  }
+
+  // Handle form errors
+  public errorHandling = (control: string, error: string) => {
+    return this.myForm.controls[control].hasError(error);
   }
 
   showPreview(event) {

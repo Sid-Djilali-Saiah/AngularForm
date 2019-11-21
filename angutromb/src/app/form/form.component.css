@@ -1,0 +1,14 @@
+form{width:420px;margin:35px auto 100px;display:block;float:none;}
+.mat-form-field{width:100%;}
+.misc-bottom-padding{margin:8px 0 20px;}
+.misc-bottom-padding mat-label{margin-right:15px;}
+.mat-radio-label{margin:0 15px 0 0;}
+.button-wrapper{margin-top:10px;}
+input[type="file"] {
+    margin-bottom: 30px;
+  } 
+input {
+    display: inline-block;
+    clear: both;
+    width: 50%;
+}
