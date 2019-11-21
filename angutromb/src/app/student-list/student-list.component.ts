@@ -15,9 +15,9 @@ export class StudentListComponent implements OnInit {
 
   newStudent: string;
 
-  private refreshTodos() {
-    const todos = localStorage.getItem('todos')
-    this.students = todos ? JSON.parse(todos) : []
+  private refreshStudents() {
+    const students = localStorage.getItem('students')
+    this.students = students ? JSON.parse(students) : []
   }
 
   constructor() { }
