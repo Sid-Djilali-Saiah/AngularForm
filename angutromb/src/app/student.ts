@@ -1,10 +1,10 @@
 export interface Student {
-
-
-        nom: string
-        blabla: string
-        blablabla: string
-    
-    
-
+        id : number
+        firstName : string
+        // lastName: string
+        // email : string
+        // gender : string
+        // grade : string
+        // avatar : string
+        // dob : string
 }

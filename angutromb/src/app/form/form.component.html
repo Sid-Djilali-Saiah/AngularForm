@@ -1,14 +1,26 @@
 
 <form [formGroup]="myForm" (ngSubmit)="onSubmit()" novalidate>
-        <!--
-        <mat-form-field class="example-full-width">
+        
+        <!-- <mat-form-field class="example-full-width">
                 <div class="imagePreview" *ngIf="imageURL && imageURL !== ''">
                         <img [src]="imageURL" style="width: 15em; height:15em">
                     </div>
             <input type="file" accept="image/*" (change)="showPreview($event)" />
             
-        </mat-form-field>
-        -->
+        </mat-form-field> -->
+
+        <!-- <mat-form-field class="example-full-width">
+                <input class="ng-hide" id="input-file-id" multiple type="file" />
+                <label for="input-file-id" class="md-button md-raised md-primary">Choose Files</label>
+        </mat-form-field> -->
+        
+        
+                <div class="imagePreview" *ngIf="imageURL && imageURL !== ''">
+                        <img [src]="imageURL" style="width: 15em; height:15em">
+                    </div>
+            <input type="file" accept="image/*" (change)="showPreview($event)" />
+            
+        
     
         <!-- First Name -->
         <mat-form-field class="example-full-width">

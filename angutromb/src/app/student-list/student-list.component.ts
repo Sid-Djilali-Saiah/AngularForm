@@ -9,8 +9,6 @@ import { Student } from "../student";
   styleUrls: ['./student-list.component.css']
 })
 export class StudentListComponent implements OnInit {
-
-
   students: Student[] = [];
 
   newStudent: string;
@@ -20,9 +18,19 @@ export class StudentListComponent implements OnInit {
     this.students = students ? JSON.parse(students) : []
   }
 
+  saveStudents() {
+    localStorage.setItem('students', JSON.stringify(this.students))
+  }
+
+  deleteStudents(student: Student) {
+    this.students = this.students.filter(s => s.id !== student.id)
+    this.saveStudents()
+  }
+
   constructor() { }
 
   ngOnInit() {
+    this.refreshStudents();
   }
 
 }

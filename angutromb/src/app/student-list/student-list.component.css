@@ -1,3 +1,9 @@
 .GridColor{
     background-color: pink;
 }
+
+
+.example-card {
+    max-width: 20em;
+  }
+  
