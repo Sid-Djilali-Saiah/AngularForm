@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { Student } from "../student";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-form',
@@ -13,7 +14,7 @@ export class FormComponent implements OnInit {
   GradeArray: any = ['B1', 'B2', 'B3', 'I1', 'I2'];
   students: Student[] = [];
 
-  constructor(public fb: FormBuilder) { }
+  constructor(public fb: FormBuilder, private router: Router) { }
 
   ngOnInit() {
     this.myForm = this.fb.group({
@@ -73,6 +74,7 @@ export class FormComponent implements OnInit {
       firstName: this.myForm.controls.firstName.value
     })
     this.saveStudents()
+    this.router.navigate(['/list'])
   }
 
 }
