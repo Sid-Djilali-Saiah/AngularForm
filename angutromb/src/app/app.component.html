@@ -1,8 +1,12 @@
 <!-- Toolbar -->
 <mat-toolbar color="primary" class="header">
-  <span class="title-center mat-h1">Trombinoscope</span>
+  <h1 class="title-left mat-h1" [routerLink]="['/']"><strong>Trombinoscope</strong></h1>
+  <span class="menu-spacer"></span>
+    <div class="example-button-row">
+      <button mat-flat-button [routerLink]="'/form'"> Add Student </button>
+      <!--<button mat-flat-button [routerLink]="'/list'"> Students List </button>-->
+    </div>
 </mat-toolbar>
-<app-form></app-form>
 
-<app-student-list></app-student-list>
 <router-outlet></router-outlet>
+<app-student-list></app-student-list>

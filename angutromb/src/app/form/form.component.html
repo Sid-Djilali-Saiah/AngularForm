@@ -1,91 +1,81 @@
-
 <form [formGroup]="myForm" (ngSubmit)="onSubmit()" novalidate>
-        
-        <!-- <mat-form-field class="example-full-width">
-                <div class="imagePreview" *ngIf="imageURL && imageURL !== ''">
-                        <img [src]="imageURL" style="width: 15em; height:15em">
-                    </div>
-            <input type="file" accept="image/*" (change)="showPreview($event)" />
-            
-        </mat-form-field> -->
+  <!--Upload Avatar-->
+  <div class="imagePreview" *ngIf="imageURL && imageURL !== ''">
+    <img [src]="imageURL" style="width: 15em; height:15em" />
+  </div>
+  <input type="file" accept="image/*" (change)="showPreview($event)" />
 
-        <!-- <mat-form-field class="example-full-width">
-                <input class="ng-hide" id="input-file-id" multiple type="file" />
-                <label for="input-file-id" class="md-button md-raised md-primary">Choose Files</label>
-        </mat-form-field> -->
-        
-        
-                <div class="imagePreview" *ngIf="imageURL && imageURL !== ''">
-                        <img [src]="imageURL" style="width: 15em; height:15em">
-                    </div>
-            <input type="file" accept="image/*" (change)="showPreview($event)" />
-            
-        
-    
-        <!-- First Name -->
-        <mat-form-field class="example-full-width">
-            <input matInput placeholder="First Name" formControlName="firstName">
-            <!-- error -->
-            <mat-error *ngIf="errorHandling('firstName', 'required')">
-            You must provide a<strong> first name</strong>
-            </mat-error>
-        </mat-form-field>
+  <!-- First Name -->
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="First Name" formControlName="firstName" />
+    <!-- error -->
+    <mat-error *ngIf="errorHandling('firstName', 'required')">
+      You must provide a<strong> first name</strong>
+    </mat-error>
+  </mat-form-field>
 
-        <!-- Last Name -->
-        <mat-form-field class="example-full-width">
-            <input matInput placeholder="Last Name" formControlName="lastName">
-            <!-- error -->
-            <mat-error *ngIf="errorHandling('lastName', 'required')">
-                You must provide a<strong> last name</strong>
-            </mat-error>
-        </mat-form-field>
-    
-        <!-- Email -->
-        <mat-form-field class="example-full-width">
-            <input matInput placeholder="Email" formControlName="email">
-            <!-- error -->
-            <mat-error *ngIf="errorHandling('email', 'required')">
-            You must provide an <strong>email</strong>
-            </mat-error>
-            <mat-error *ngIf="errorHandling('email', 'email')">
-            You must provide a valid <strong>email</strong>
-            </mat-error>
-        </mat-form-field>
-    
-        <!-- Gender -->
-        <div class="misc-bottom-padding">
-            <mat-label>Gender : </mat-label>
-            <mat-radio-group aria-label="Select an option" formControlName="gender">
-            <mat-radio-button value="Male">Male &nbsp;</mat-radio-button>
-            <mat-radio-button value="Female">Female</mat-radio-button>
-            </mat-radio-group>
-        </div>
-    
-        <!-- Date picker -->
-        <mat-form-field>
-            <input matInput readonly [matDatepicker]="picker" placeholder="Date of birth" formControlName="dob"
-            (dateChange)="date($event)">
-            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-            <mat-datepicker #picker></mat-datepicker>
-            <!-- error -->
-            <mat-error *ngIf="errorHandling('dob', 'required')">
-            Please enter your <strong>date of birth</strong>
-            </mat-error>
-        </mat-form-field>
+  <!-- Last Name -->
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Last Name" formControlName="lastName" />
+    <!-- error -->
+    <mat-error *ngIf="errorHandling('lastName', 'required')">
+      You must provide a<strong> last name</strong>
+    </mat-error>
+  </mat-form-field>
 
-            <!-- Class -->
-        <mat-form-field>
-            <mat-label>Grade</mat-label>
-            <mat-select [(value)]="selected" formControlName="grade">
-                <mat-option [value]="gradeArray" *ngFor="let gradeArray of GradeArray">{{gradeArray}}
-                </mat-option>
-            </mat-select>
-            <mat-error *ngIf="errorHandling('grade', 'required')">
-                Please select your <strong>grade</strong>
-            </mat-error>
-        </mat-form-field>
+  <!-- Email -->
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Email" formControlName="email" />
+    <!-- error -->
+    <mat-error *ngIf="errorHandling('email', 'required')">
+      You must provide an <strong>email</strong>
+    </mat-error>
+    <mat-error *ngIf="errorHandling('email', 'email')">
+      You must provide a valid <strong>email</strong>
+    </mat-error>
+  </mat-form-field>
 
-        <div class="button-wrapper">
-            <button mat-flat-button color="primary">Submit</button>
-        </div>
+  <!-- Gender -->
+  <div class="misc-bottom-padding">
+    <mat-label>Gender : </mat-label>
+    <mat-radio-group aria-label="Select an option" formControlName="gender">
+      <mat-radio-button value="Male">Male &nbsp;</mat-radio-button>
+      <mat-radio-button value="Female">Female</mat-radio-button>
+    </mat-radio-group>
+  </div>
+
+  <!-- Date picker -->
+  <mat-form-field>
+    <input
+      matInput
+      readonly
+      [matDatepicker]="picker"
+      placeholder="Date of birth"
+      formControlName="dob"
+      (dateChange)="date($event)"
+    />
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+    <!-- error -->
+    <mat-error *ngIf="errorHandling('dob', 'required')">
+      Please enter your <strong>date of birth</strong>
+    </mat-error>
+  </mat-form-field>
+
+  <!-- Class -->
+  <mat-form-field>
+    <mat-label>Grade</mat-label>
+    <mat-select [(value)]="selected" formControlName="grade">
+      <mat-option [value]="gradeArray" *ngFor="let gradeArray of GradeArray"
+        >{{ gradeArray }}
+      </mat-option>
+    </mat-select>
+    <mat-error *ngIf="errorHandling('grade', 'required')">
+      Please select your <strong>grade</strong>
+    </mat-error>
+  </mat-form-field>
+
+  <div class="button-wrapper">
+    <button mat-flat-button color="primary" [disabled]="!myForm.valid">Add</button>
+  </div>
 </form>

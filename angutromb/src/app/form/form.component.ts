@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
+import { Student } from "../student";
 
 @Component({
   selector: 'app-form',
@@ -14,6 +15,7 @@ export class FormComponent implements OnInit {
   myForm: FormGroup;
   imageURL: string;
   GradeArray: any = ['B1', 'B2', 'B3', 'I1', 'I2'];
+  students: Student[] = [];
 
   constructor(public fb: FormBuilder) { }
 
@@ -26,7 +28,17 @@ export class FormComponent implements OnInit {
       gender: [''],
       dob: ['', [Validators.required]],
       grade: ['', [Validators.required]]
-    })
+    });
+    this.refreshStudents();
+  }
+
+  private refreshStudents() {
+    const students = localStorage.getItem('students')
+    this.students = students ? JSON.parse(students) : []
+  }
+
+  saveStudents() {
+    localStorage.setItem('students', JSON.stringify(this.students))
   }
 
   // Date
@@ -59,7 +71,12 @@ export class FormComponent implements OnInit {
 
   // Submit Form
   onSubmit() {
-    console.log(this.myForm.value)
+    console.log(this.myForm.value);
+    this.students.push({
+      id: this.students.reduce((acc, t) => acc <= t.id ? t.id + 1 : acc, 1),
+      firstName: this.myForm.controls.firstName.value
+    })
+    this.saveStudents()
   }
 
 }

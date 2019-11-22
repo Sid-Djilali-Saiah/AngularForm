@@ -1,1 +1,6 @@
 .title-center{margin:0 auto;}
+.title-left{margin-left: 1em;}
+.example-button-row {position: absolute; right: 0;}
+.example-button-row button {
+    margin-right: 1em;
+}
