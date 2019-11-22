@@ -30,8 +30,8 @@
           </p>
         </mat-card-content>
         <mat-card-actions>            
-          <button mat-button (click)="deleteStudents(student)">DELETE</button>
-          <button mat-button >SHOW</button>
+          <button mat-button [@deleteTrigger] (click)="deleteStudents(student)">DELETE</button>
+          <button mat-button>SHOW</button>
         </mat-card-actions>
       </mat-card>
 
