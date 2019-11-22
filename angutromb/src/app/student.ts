@@ -6,5 +6,5 @@ export interface Student {
         //email : string
         //gender : string
         //grade : string
-        //dob : string
+        dob : string
 }

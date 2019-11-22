@@ -72,7 +72,8 @@ export class FormComponent implements OnInit {
     this.students.push({
       id: this.students.reduce((acc, t) => acc <= t.id ? t.id + 1 : acc, 1),
       firstName: this.myForm.controls.firstName.value,
-      avatar: this.imageURL
+      avatar: this.imageURL,
+      dob: this.myForm.controls.dob.value
     })
     this.saveStudents()
     this.router.navigate(['/list'])

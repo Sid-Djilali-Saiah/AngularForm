@@ -9,6 +9,7 @@ import { StudentComponent } from './student/student.component';
 import { StudentListComponent } from './student-list/student-list.component';
 import { AngularMaterialModule } from './material.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AgePipe } from './age.pipe';
 
 
 
@@ -17,7 +18,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppComponent,
     FormComponent,
     StudentComponent,
-    StudentListComponent
+    StudentListComponent,
+    AgePipe
   ],
   imports: [
     BrowserModule,

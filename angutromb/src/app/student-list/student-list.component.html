@@ -19,7 +19,7 @@
       <mat-card class="example-card" >
         <mat-card-header>
           <mat-card-title>{{student.firstName}}</mat-card-title>
-          <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+          <mat-card-subtitle>{{student.dob | age}}</mat-card-subtitle>
         </mat-card-header>
         <img mat-card-image src="{{student.avatar}}">
         <mat-card-content>
