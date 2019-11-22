@@ -1,6 +1,6 @@
 export interface Student {
         id : number
-        //avatar : string
+        avatar : string
         firstName : string
         //lastName: string
         //email : string

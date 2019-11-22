@@ -18,7 +18,7 @@ export class FormComponent implements OnInit {
 
   ngOnInit() {
     this.myForm = this.fb.group({
-      avatar: [null],
+      avatar: [null, [Validators.required]],
       firstName: ['', [Validators.required]],
       lastName: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
@@ -71,7 +71,8 @@ export class FormComponent implements OnInit {
     console.log(this.myForm.value);
     this.students.push({
       id: this.students.reduce((acc, t) => acc <= t.id ? t.id + 1 : acc, 1),
-      firstName: this.myForm.controls.firstName.value
+      firstName: this.myForm.controls.firstName.value,
+      avatar: this.imageURL
     })
     this.saveStudents()
     this.router.navigate(['/list'])
