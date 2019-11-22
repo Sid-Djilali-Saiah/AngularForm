@@ -8,10 +8,6 @@ import { Student } from "../student";
   styleUrls: ['./form.component.css']
 })
 export class FormComponent implements OnInit {
-  visible = true;
-  selectable = true;
-  removable = true;
-  addOnBlur = true;
   myForm: FormGroup;
   imageURL: string;
   GradeArray: any = ['B1', 'B2', 'B3', 'I1', 'I2'];
