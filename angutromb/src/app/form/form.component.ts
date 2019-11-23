@@ -24,7 +24,7 @@ export class FormComponent implements OnInit {
       lastName: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
       gender: [''],
-      dob: ['', [Validators.required]],
+      dob: ['', [Validators.required, RequiredAgeValidator]],
       grade: ['', [Validators.required]]
     });
     this.refreshStudents();
