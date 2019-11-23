@@ -1,7 +1,7 @@
 <form [formGroup]="myForm" (ngSubmit)="onSubmit()" novalidate>
   <!--Upload Avatar-->
   <div class="imagePreview" *ngIf="imageURL && imageURL !== ''">
-    <img [src]="imageURL" style="width: 15em; height:15em" />
+    <img [src]="imageURL" class="mat-card-image" />
   </div>
   <input type="file" accept="image/*" (change)="showPreview($event)" />
 

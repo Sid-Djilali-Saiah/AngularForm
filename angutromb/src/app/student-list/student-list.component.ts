@@ -48,6 +48,7 @@ export class StudentListComponent implements OnInit {
   // Ouverture du dialog détail du profil
   openDialogShowStudent(student : Student): void {
     const dialogRef = this.dialog.open(StudentComponent, {
+      width:'30em',
       data: {
          id : student.id,
          avatar : student.avatar,
