@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { Student } from "../student";
 import { trigger, state, style, transition, animate } from '@angular/animations';
-
+import { StudentComponent } from '../student/student.component';
 
 const ANIMATION_TIME = 300
 @Component({
@@ -17,6 +18,7 @@ const ANIMATION_TIME = 300
   ]
 
 })
+
 export class StudentListComponent implements OnInit {
   students: Student[] = [];
 
@@ -27,13 +29,10 @@ export class StudentListComponent implements OnInit {
     this.students = students ? JSON.parse(students) : []
   }
 
+
   saveStudents() {
     localStorage.setItem('students', JSON.stringify(this.students))
   }
-
-
-  
-
 
 
   deleteStudents(student: Student) {
@@ -42,13 +41,22 @@ export class StudentListComponent implements OnInit {
     // setTimeout(() => (this.students = this.students.filter(s => s.id !== student.id)), ANIMATION_TIME + 50)
 
     this.students = this.students.filter(s => s.id !== student.id)
-    
-  
     this.saveStudents()
   
   }
 
-  constructor() { }
+  // Ouverture du dialog détail du profil
+  openDialogShowStudent(student : Student): void {
+    const dialogRef = this.dialog.open(StudentComponent, {
+      data: {
+         id : student.id,
+         avatar : student.avatar,
+         firstName : student.firstName,
+         dob : student.dob
+      }
+    });
+  }     
+  constructor(public dialog : MatDialog) {}
 
   ngOnInit() {
     this.refreshStudents();

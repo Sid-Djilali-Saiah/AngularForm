@@ -29,6 +29,7 @@ import { AgePipe } from './age.pipe';
     ReactiveFormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents :[StudentComponent]
 })
 export class AppModule { }

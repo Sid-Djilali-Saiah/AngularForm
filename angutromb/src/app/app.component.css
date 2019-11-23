@@ -1,5 +1,16 @@
 .title-center{margin:0 auto;}
-.title-left{margin-left: 1em;}
+.title-left{
+    margin-left: 1em;
+    cursor: pointer;
+    text-align: center;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+  
+    -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent;
+}
 .example-button-row {position: absolute; right: 0;}
 .example-button-row button {
     margin-right: 1em;

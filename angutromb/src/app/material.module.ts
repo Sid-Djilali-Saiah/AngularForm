@@ -19,6 +19,10 @@ import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatCardModule } from '@angular/material/card';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatRippleModule} from '@angular/material/core';
+import {MatDialogModule} from '@angular/material/dialog';
+import { MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 
 @NgModule({
    imports: [
@@ -40,8 +44,10 @@ import { MatCardModule } from '@angular/material/card';
       MatTooltipModule,
       MatTableModule,
       MatPaginatorModule,
-      MatCardModule
-
+      MatCardModule,
+      MatExpansionModule,
+      MatRippleModule,
+      MatDialogModule
    ],
    exports: [
       MatButtonModule,
@@ -60,7 +66,10 @@ import { MatCardModule } from '@angular/material/card';
       MatTooltipModule,
       MatTableModule,
       MatPaginatorModule,
-      MatCardModule
+      MatCardModule,
+      MatExpansionModule,
+      MatRippleModule,
+      MatDialogModule
    ],
    providers: [
       MatDatepickerModule,
