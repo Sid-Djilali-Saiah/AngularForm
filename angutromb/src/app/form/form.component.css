@@ -12,3 +12,43 @@ input {
     clear: both;
     width: 50%;
 }
+
+
+
+
+.label-file {
+  /* cursor: pointer;
+  color: #673ab7;
+  font-weight: bold;
+  transition: 500ms; */
+
+    border-radius: 5px;
+    border: 2px solid #673ab7;
+    transition: 1000ms;  
+    color: gray;
+    background-color: white;
+    /* font-size: 1.25rem; */
+    font-weight: normal;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    padding: 0.350rem 0.750rem;
+    /* width: 5em; */
+
+}
+.label-file:hover {
+
+  color: #ffd740;
+  background-color:#673ab7 ;
+  
+  
+
+}
+
+/* et on masque le input */
+.input-file {
+  display: none;
+}
+

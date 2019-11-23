@@ -3,7 +3,11 @@
   <div class="imagePreview" *ngIf="imageURL && imageURL !== ''">
     <img [src]="imageURL" class="mat-card-image" />
   </div>
-  <input type="file" accept="image/*" (change)="showPreview($event)" />
+  
+  <label for="file" class="label-file">Choisir une image</label>
+  <input id="file" class="input-file" type="file" accept="image/*" (change)="showPreview($event)" />
+  
+  
 
   <!-- First Name -->
   <mat-form-field class="example-full-width">
