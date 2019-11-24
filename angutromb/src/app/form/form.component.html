@@ -136,7 +136,7 @@
       <br />
       <!-- Start form units array with first row must and dynamically add more -->
       <mat-card formArrayName="languages">
-        <mat-card-title>Programming Languages</mat-card-title>
+        <mat-card-title style="font-size: 14px;">Programming Languages</mat-card-title>
         <mat-divider></mat-divider>
 
         <!-- loop throught units -->
@@ -197,8 +197,8 @@
     </mat-card-content>
 
     <mat-card-actions>
-      <!--[disabled]="!myForm.valid"-->
-      <button type="submit" mat-flat-button color="primary">
+      
+      <button type="submit" mat-flat-button color="primary" [disabled]="!myForm.valid">
         Add
       </button>
     </mat-card-actions>
