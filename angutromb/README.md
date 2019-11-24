@@ -14,69 +14,71 @@ Il vous faudra un IDE tel que visual studio code ainsi que de yarn ou de mpm.
 What things you need to install the software and how to install them
 
 ```
-- npm
+- npm 
+- npm install (dans le fichier angutromb)
 
 ```
+### Exigences du projet
 
-### Installing
+    Reactive Forms
 
-A step by step series of examples that tell you how to get a development env running
+    Utilisation de "Reactive Forms" pour la création du formulaire
+    Custom Validator
 
-Say what the step will be
+    Utilisation d'un "Custom Validator" pour vérifiez que l'étudiant a plus de 18 ans
+    Custom Pipe
+
+    Utilisation d'un "Custom pipe" pour calculer l'age d'une étudiant à partir de sa date de naissance
+    FormArray
+
+    Utilisation d'un "FormArray" pour ajouter plusieurs langages de programmation
+    Animation
+
+    Utilisation d'animation lors de l'affichage de la liste des étudiants
+    Angular Material
+
+    Utilisation de Angular Material pour le design de l'application
+    Affichage des informations récupérées grâce au formulaire
+
+    Affichage des informations des étudiants dans une liste, et affichage d'un étudiant lors de la selection d'un etudiant dans la liste
+    
+### Bonus 
+     Routing
+
+    Systeme de routing, redirection vers une page dédié au à une utilisation spécifique, exemple : page form, page liste etudiants ...
+    Stockage dans le LocalStorage
+
+    Utilisation du localstorage pour stocker les étudiants et les retrouver dans la liste des étudiants
+    Possibilité d'ajouté plusieurs étudiants grâce au formulaire
+
+    Grace au localStorage il est possible d'ajouter plusieurs étudiants
+    Affichage de la liste d'étudiants
+
+    Page dédié à la liste des étudiants qui s'affiche en récuperant les informations stocké dans le localStorage
+    
+### Contenu 
+
+Le projet est constitué de 3 composants:
 
 ```
-Give the example
+form
 ```
 
-And repeat
-
 ```
-until finished
+homepage
 ```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
 ```
-Give an example
-```
+student-list
+---
 
-### And coding style tests
 
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+**Sid Djilali Saiah ** - 
+**Nicolas Chambon Alias Capitaine Gloomy  ** - 
+**Théo Martin  ** - 
+**François-Marie Lauze  ** - 
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
