@@ -14,8 +14,7 @@ Il vous faudra un IDE tel que visual studio code ainsi que de yarn ou de npm.
 What things you need to install the software and how to install them
 
 ```
-- npm 
-- npm install (dans le fichier angutromb)
+- npm install (dans le dossier angutromb)
 
 ```
 ### Exigences du projet
@@ -71,11 +70,6 @@ homepage
 student-list
 ```
 ```
-app-routing.module.ts : gestion des routes 
-classe student.ts
-material.module.ts
-required-age.validator.ts : verification age
-```
 
 
 ## Authors
@@ -84,9 +78,5 @@ required-age.validator.ts : verification age
 **Nicolas Chambon Alias Capitaine Gloomy  ** - 
 **Théo Martin  ** - 
 **François-Marie Lauze  ** - 
-
-## License
-
-Ce projet est open source, libre de droit  (ptdr)
 
 
