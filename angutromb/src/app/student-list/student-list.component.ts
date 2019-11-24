@@ -3,16 +3,16 @@ import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog
 import { Student } from "../student";
 import { trigger, state, style, transition, animate } from '@angular/animations';
 
-const ANIMATION_TIME = 300
+
 @Component({
   selector: 'app-student-list',
   templateUrl: './student-list.component.html',
   styleUrls: ['./student-list.component.css'],
   animations: [
-    trigger('deleteTrigger', [
-      state('isNotDeleting', style({ opacity: 1 })),
-      state('isDeleting', style({opacity: 0 })),
-      transition('isNotDeleting => isDeleting', animate(ANIMATION_TIME))
+    trigger('visibilityChanged', [
+      state('hidden', style({ opacity: 0 })),
+      state('shown', style({ opacity: 1 })),      
+      transition('hidden => shown', animate('1000ms'))
     ])
   ]
 
@@ -21,16 +21,22 @@ const ANIMATION_TIME = 300
 export class StudentListComponent implements OnInit {
   students: Student[] = [];
 
+  fadeIn = true;
+
+  visiblityState = 'hidden';
+
   newStudent: string;
 
   private refreshStudents() {
     const students = localStorage.getItem('students')
     this.students = students ? JSON.parse(students) : []
+    
   }
 
 
   saveStudents() {
     localStorage.setItem('students', JSON.stringify(this.students))
+    
   }
 
 
@@ -63,7 +69,15 @@ export class StudentListComponent implements OnInit {
   constructor(public dialog : MatDialog) {}
 
   ngOnInit() {
-    this.refreshStudents();
+    
+    console.log(this.fadeIn)
+    // setTimeout(() => this.refreshStudents(), ANIMATION_TIME + 50)
+    this.refreshStudents()  
+    if (this.visiblityState == "hidden") {
+      setTimeout(() => this.visiblityState = "shown")
+    }
+    
+    
   }
 
 }
