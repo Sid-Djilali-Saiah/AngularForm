@@ -12,4 +12,5 @@ export interface Student {
   grade: string;
   dob: string;
   subjects: Subject[];
+  languages: any;
 }

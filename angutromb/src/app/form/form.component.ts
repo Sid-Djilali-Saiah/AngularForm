@@ -127,7 +127,8 @@ export class FormComponent implements OnInit {
       gender: this.myForm.controls.gender.value,
       grade: this.myForm.controls.grade.value,
       dob: this.myForm.controls.dob.value,
-      subjects: this.SubjectsArray
+      subjects: this.SubjectsArray,
+      languages: this.myForm.controls.languages.value
     });
     this.saveStudents();
     this.router.navigate(["/list"]);

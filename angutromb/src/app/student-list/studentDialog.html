@@ -25,9 +25,7 @@
             </mat-panel-title>
           </mat-expansion-panel-header>
           <mat-list role="languages">
-                <mat-list-item role="listitem">Langage 1</mat-list-item>
-                <mat-list-item role="listitem">Langage 2</mat-list-item>
-                <mat-list-item role="listitem">Langage 3</mat-list-item>
+                <mat-list-item role="listitem" *ngFor="let item of data.languages">{{item.language}}</mat-list-item>
               </mat-list>
         </mat-expansion-panel>
     

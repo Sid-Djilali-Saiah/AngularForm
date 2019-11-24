@@ -63,7 +63,8 @@ export class StudentListComponent implements OnInit {
          gender : student.gender,
          grade : student.grade,
          dob : student.dob,
-         subjects: student.subjects
+         subjects: student.subjects,
+         languages: student.languages
       }
     });
   }     
