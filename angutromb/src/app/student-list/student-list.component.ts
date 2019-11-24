@@ -1,8 +1,7 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit, Inject} from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { Student } from "../student";
 import { trigger, state, style, transition, animate } from '@angular/animations';
-import { StudentComponent } from '../student/student.component';
 
 const ANIMATION_TIME = 300
 @Component({
@@ -68,3 +67,23 @@ export class StudentListComponent implements OnInit {
   }
 
 }
+
+@Component({
+  selector: 'app-student',
+  templateUrl: './studentDialog.html',
+  styleUrls: ['./studentDialog.css']
+})
+export class StudentComponent implements OnInit {
+
+  constructor(
+    public dialogRef: MatDialogRef<StudentComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: StudentListComponent) {}
+
+    closeDialog(): void {
+    this.dialogRef.close();
+  }
+
+  ngOnInit() {
+  }
+}
+

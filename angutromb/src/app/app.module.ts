@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormComponent } from './form/form.component';
-import { StudentComponent } from './student/student.component';
+import { StudentComponent } from './student-list/student-list.component';
 import { StudentListComponent } from './student-list/student-list.component';
 import { AngularMaterialModule } from './material.module';
 import { ReactiveFormsModule } from '@angular/forms';

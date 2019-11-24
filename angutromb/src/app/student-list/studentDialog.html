@@ -1,0 +1,55 @@
+<!-- Nom / prénom dans titre -->
+<h1 mat-dialog-title>Profil de {{data.firstName}} {{data.lastName}}</h1>
+<mat-dialog-content>
+<!-- Profil d'un élève -->
+    <!-- Photo -->
+    <img mat-card-image class="mat-card-image" src="{{data.avatar}}">
+
+    <!-- Email -->
+    <p> Contact : {{data.email}} </p>
+
+    <!-- Date de naissance -->
+    <p> Né le : {{data.dob}} </p>
+
+    <!-- Genre -->
+    <p> Genre : {{data.gender}} </p>
+
+    <!-- Classe -->
+    <p> Promotion : {{data.grade}} </p>
+
+    <!-- Hobbys et langages maîtrisés -->
+      <mat-accordion>
+        <!-- Langages -->
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Langages maîtrisés
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-list role="languages">
+                <mat-list-item role="listitem">Langage 1</mat-list-item>
+                <mat-list-item role="listitem">Langage 2</mat-list-item>
+                <mat-list-item role="listitem">Langage 3</mat-list-item>
+              </mat-list>
+        </mat-expansion-panel>
+    
+        <!-- Hobbys -->
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Hobbys
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-list role="hobbys">
+                <mat-list-item role="listitem">Hobby 1</mat-list-item>
+                <mat-list-item role="listitem">Hobby 2</mat-list-item>
+                <mat-list-item role="listitem">Hobby 3</mat-list-item>
+              </mat-list>
+        </mat-expansion-panel>
+    </mat-accordion>
+
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button mat-button (click)="closeDialog()">Fermer</button>
+</mat-dialog-actions>
