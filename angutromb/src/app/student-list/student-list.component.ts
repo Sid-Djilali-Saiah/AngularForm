@@ -53,6 +53,10 @@ export class StudentListComponent implements OnInit {
          id : student.id,
          avatar : student.avatar,
          firstName : student.firstName,
+         lastName: student.lastName,
+         email : student.email,
+         gender : student.gender,
+         grade : student.grade,
          dob : student.dob
       }
     });

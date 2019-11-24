@@ -72,8 +72,12 @@ export class FormComponent implements OnInit {
     console.log(this.myForm.value);
     this.students.push({
       id: this.students.reduce((acc, t) => acc <= t.id ? t.id + 1 : acc, 1),
-      firstName: this.myForm.controls.firstName.value,
       avatar: this.imageURL,
+      firstName: this.myForm.controls.firstName.value,
+      lastName: this.myForm.controls.lastName.value,
+      email : this.myForm.controls.email.value,
+      gender : this.myForm.controls.gender.value,
+      grade : this.myForm.controls.grade.value,
       dob: this.myForm.controls.dob.value
     })
     this.saveStudents()

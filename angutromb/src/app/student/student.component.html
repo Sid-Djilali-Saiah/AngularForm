@@ -1,21 +1,21 @@
 <!-- Nom / prénom dans titre -->
-<h1 mat-dialog-title>Profil de : {{data.firstName}}</h1>
+<h1 mat-dialog-title>Profil de {{data.firstName}} {{data.lastName}}</h1>
 <mat-dialog-content>
 <!-- Profil d'un élève -->
     <!-- Photo -->
     <img mat-card-image class="mat-card-image" src="{{data.avatar}}">
 
     <!-- Email -->
-    <p> EMail </p>
+    <p> Contact : {{data.email}} </p>
 
     <!-- Date de naissance -->
     <p> Né le : {{data.dob}} </p>
 
     <!-- Genre -->
-    <p> Genre </p>
+    <p> Genre : {{data.gender}} </p>
 
     <!-- Classe -->
-    <p> Classe </p>
+    <p> Promotion : {{data.grade}} </p>
 
     <!-- Hobbys et langages maîtrisés -->
       <mat-accordion>

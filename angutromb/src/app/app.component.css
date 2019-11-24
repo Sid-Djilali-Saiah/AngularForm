@@ -1,6 +1,7 @@
 .title-center{margin:0 auto;}
 .title-left{
     margin-left: 1em;
+    margin-top:0.5em;
     cursor: pointer;
     text-align: center;
     user-select: none;
