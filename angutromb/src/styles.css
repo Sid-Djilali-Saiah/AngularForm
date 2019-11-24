@@ -2,15 +2,27 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
 
-html,body{height:100%;}
-body{margin:0;font-family:Roboto, "Helvetica Neue", sans-serif;}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
-.mat-card-image{
+.mat-card-image {
+  object-fit: scale-down;
+  width: 20em;
+  height: 15em;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-    object-fit: scale-down;
-    width: 20em;
-    height: 15em;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
+.main-div {
+  height: 125vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
