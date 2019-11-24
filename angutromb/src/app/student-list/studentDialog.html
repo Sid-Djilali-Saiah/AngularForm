@@ -1,29 +1,27 @@
 <!-- Nom / prénom dans titre -->
-<h1 mat-dialog-title>Profil de {{data.firstName}} {{data.lastName}}</h1>
+<h1 mat-dialog-title>{{data.firstName}} {{data.lastName}}</h1>
 <mat-dialog-content>
 <!-- Profil d'un élève -->
     <!-- Photo -->
     <img mat-card-image class="mat-card-image" src="{{data.avatar}}">
 
     <!-- Email -->
-    <p> Contact : {{data.email}} </p>
 
-    <!-- Date de naissance -->
-    <p> Né le : {{data.dob}} </p>
-
-    <!-- Genre -->
-    <p> Genre : {{data.gender}} </p>
-
-    <!-- Classe -->
-    <p> Promotion : {{data.grade}} </p>
-
-    <!-- Hobbys et langages maîtrisés -->
+    <mat-list>
+      <mat-list-item>E-mail : {{data.email}}</mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>Age : {{data.dob | age}}</mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>Gender : {{data.gender}}</mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>Grade : {{data.grade}}</mat-list-item>
+      <mat-divider></mat-divider>
       <mat-accordion>
         <!-- Langages -->
         <mat-expansion-panel>
           <mat-expansion-panel-header>
             <mat-panel-title>
-              Langages maîtrisés
+              Programming languages
             </mat-panel-title>
           </mat-expansion-panel-header>
           <mat-list role="languages">
@@ -47,7 +45,13 @@
         </mat-expansion-panel>
     </mat-accordion>
 
+
+
+    </mat-list>
+
+
 </mat-dialog-content>
+<mat-divider></mat-divider>
 
 <mat-dialog-actions>
   <button mat-button (click)="closeDialog()">Fermer</button>
