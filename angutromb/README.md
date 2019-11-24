@@ -70,7 +70,12 @@ homepage
 ```
 student-list
 ```
-
+```
+app-routing.module.ts : gestion des routes 
+classe student.ts
+material.module.ts
+required-age.validator.ts : verification age
+```
 
 
 ## Authors
