@@ -80,15 +80,8 @@ student-list
 **Théo Martin  ** - 
 **François-Marie Lauze  ** - 
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+Ce projet est open source, libre de droit  (ptdr)
 
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
 
