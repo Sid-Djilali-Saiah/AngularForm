@@ -2,12 +2,9 @@
 
 README - Projet trombinoscope
 
-Bienvenue dans le projet trombinoscope ! réalisé en Angular, il permet à un utilisateur d'inscrire une personne via un formulaire, avec une photo de la personne, afin de créer une liste. 
-On peux également gérer sa liste en consultant le profil de chaque personne ainsi que la possibilité de supprmier une personne de la liste. 
+Bienvenue dans le projet trombinoscope ! réalisé en Angular, il permet à un utilisateur de créer un trombinoscope, l'ajout d'un étudiant se fait via un formulaire,il est aussi possible d'afficher la liste des étudiants inscrits. 
+On peut également gérer sa liste en consultant le profil de chaque personne ainsi que la possibilité de supprimer une personne de la liste. 
 
-## Bien commencer
-
-Il vous faudra un IDE tel que visual studio code ainsi que de yarn ou de npm. 
 
 ### Prerequisites
 
