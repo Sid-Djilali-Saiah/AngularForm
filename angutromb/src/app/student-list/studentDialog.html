@@ -37,13 +37,12 @@
         <mat-expansion-panel>
           <mat-expansion-panel-header>
             <mat-panel-title>
-              Hobbys
+              Hobbies
             </mat-panel-title>
           </mat-expansion-panel-header>
           <mat-list role="hobbys">
-                <mat-list-item role="listitem">Hobby 1</mat-list-item>
-                <mat-list-item role="listitem">Hobby 2</mat-list-item>
-                <mat-list-item role="listitem">Hobby 3</mat-list-item>
+                <mat-list-item role="listitem"  *ngFor="let item of data.subjects">{{item.name}}</mat-list-item>
+                
               </mat-list>
         </mat-expansion-panel>
     </mat-accordion>

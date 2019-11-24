@@ -1,89 +1,205 @@
-<form [formGroup]="myForm" (ngSubmit)="onSubmit()" novalidate>
-  <!--Upload Avatar-->
-  <div class="imagePreview" *ngIf="imageURL && imageURL !== ''">
-    <img [src]="imageURL" class="mat-card-image" />
-  </div>
-  
-  <label for="file" class="label-file">Choisir une image</label>
-  <input id="file" class="input-file" type="file" accept="image/*" (change)="showPreview($event)" />
-  
-  
+<mat-card>
+  <mat-card-title></mat-card-title>
+  <form [formGroup]="myForm" (ngSubmit)="onSubmit()" novalidate>
+    <mat-card-content>
+      <div
+        fxLayout="row"
+        fxLayout.xs="column"
+        fxLayoutWrap
+        fxLayoutGap="3.5%"
+        fxLayoutAlign="left"
+      >
+        <!--Upload Avatar-->
+        <div class="imagePreview" *ngIf="imageURL && imageURL !== ''">
+          <img [src]="imageURL" class="mat-card-image" />
+        </div>
 
-  <!-- First Name -->
-  <mat-form-field class="example-full-width">
-    <input matInput placeholder="First Name" formControlName="firstName" />
-    <!-- error -->
-    <mat-error *ngIf="errorHandling('firstName', 'required')">
-      You must provide a<strong> first name</strong>
-    </mat-error>
-  </mat-form-field>
+        <label for="file" class="label-file">Choisir une image</label>
+        <input
+          id="file"
+          class="input-file"
+          type="file"
+          accept="image/*"
+          (change)="showPreview($event)"
+        />
 
-  <!-- Last Name -->
-  <mat-form-field class="example-full-width">
-    <input matInput placeholder="Last Name" formControlName="lastName" />
-    <!-- error -->
-    <mat-error *ngIf="errorHandling('lastName', 'required')">
-      You must provide a<strong> last name</strong>
-    </mat-error>
-  </mat-form-field>
+        <!-- First Name -->
+        <mat-form-field class="example-full-width">
+          <input
+            matInput
+            placeholder="First Name"
+            formControlName="firstName"
+          />
+          <!-- error -->
+          <mat-error *ngIf="errorHandling('firstName', 'required')">
+            You must provide a<strong> first name</strong>
+          </mat-error>
+        </mat-form-field>
 
-  <!-- Email -->
-  <mat-form-field class="example-full-width">
-    <input matInput placeholder="Email" formControlName="email" />
-    <!-- error -->
-    <mat-error *ngIf="errorHandling('email', 'required')">
-      You must provide an <strong>email</strong>
-    </mat-error>
-    <mat-error *ngIf="errorHandling('email', 'email')">
-      You must provide a valid <strong>email</strong>
-    </mat-error>
-  </mat-form-field>
+        <!-- Last Name -->
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Last Name" formControlName="lastName" />
+          <!-- error -->
+          <mat-error *ngIf="errorHandling('lastName', 'required')">
+            You must provide a<strong> last name</strong>
+          </mat-error>
+        </mat-form-field>
 
-  <!-- Gender -->
-  <div class="misc-bottom-padding">
-    <mat-label>Gender : </mat-label>
-    <mat-radio-group aria-label="Select an option" formControlName="gender">
-      <mat-radio-button value="Male">Male &nbsp;</mat-radio-button>
-      <mat-radio-button value="Female">Female</mat-radio-button>
-    </mat-radio-group>
-  </div>
+        <!-- Email -->
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Email" formControlName="email" />
+          <!-- error -->
+          <mat-error *ngIf="errorHandling('email', 'required')">
+            You must provide an <strong>email</strong>
+          </mat-error>
+          <mat-error *ngIf="errorHandling('email', 'email')">
+            You must provide a valid <strong>email</strong>
+          </mat-error>
+        </mat-form-field>
 
-  <!-- Date picker -->
-  <mat-form-field>
-    <input
-      matInput
-      readonly
-      [matDatepicker]="picker"
-      placeholder="Date of birth"
-      formControlName="dob"
-      (dateChange)="date($event)"
-    />
-    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-    <mat-datepicker #picker></mat-datepicker>
-    <!-- error -->
-    <mat-error *ngIf="errorHandling('dob', 'required')">
-      Please enter your <strong>date of birth</strong>
-    </mat-error>
-    <!--custom validator error--> 
-    <mat-error *ngIf="'dob.error?.RequiredAgeNotValid'">
-      You must must be more than <strong>18</strong>
-    </mat-error>
-  </mat-form-field>
+        <!-- Gender -->
+        <div class="misc-bottom-padding">
+          <mat-label>Gender : </mat-label>
+          <mat-radio-group
+            aria-label="Select an option"
+            formControlName="gender"
+          >
+            <mat-radio-button value="Male">Male &nbsp;</mat-radio-button>
+            <mat-radio-button value="Female">Female</mat-radio-button>
+          </mat-radio-group>
+        </div>
 
-  <!-- Class -->
-  <mat-form-field>
-    <mat-label>Grade</mat-label>
-    <mat-select [(value)]="selected" formControlName="grade">
-      <mat-option [value]="gradeArray" *ngFor="let gradeArray of GradeArray"
-        >{{ gradeArray }}
-      </mat-option>
-    </mat-select>
-    <mat-error *ngIf="errorHandling('grade', 'required')">
-      Please select your <strong>grade</strong>
-    </mat-error>
-  </mat-form-field>
+        <!-- Date picker -->
+        <mat-form-field>
+          <input
+            matInput
+            readonly
+            [matDatepicker]="picker"
+            placeholder="Date of birth"
+            formControlName="dob"
+            (dateChange)="date($event)"
+          />
+          <mat-datepicker-toggle
+            matSuffix
+            [for]="picker"
+          ></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+          <!-- error -->
+          <mat-error *ngIf="errorHandling('dob', 'required')">
+            Please enter your <strong>date of birth</strong>
+          </mat-error>
+          <!--custom validator error-->
+          <mat-error *ngIf="'dob.error?.RequiredAgeNotValid'">
+            You must must be more than <strong>18</strong>
+          </mat-error>
+        </mat-form-field>
 
-  <div class="button-wrapper">
-    <button mat-flat-button color="primary" [disabled]="!myForm.valid">Add</button>
-  </div>
-</form>
+        <!-- Class -->
+        <mat-form-field>
+          <mat-label>Grade</mat-label>
+          <mat-select [(value)]="selected" formControlName="grade">
+            <mat-option
+              [value]="gradeArray"
+              *ngFor="let gradeArray of GradeArray"
+              >{{ gradeArray }}
+            </mat-option>
+          </mat-select>
+          <mat-error *ngIf="errorHandling('grade', 'required')">
+            Please select your <strong>grade</strong>
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <!-- Add Subjects -->
+      <mat-form-field class="multiple-items">
+        <mat-chip-list #chipList>
+          <mat-chip
+            *ngFor="let subjectsArray of SubjectsArray"
+            [selectable]="selectable"
+            [removable]="removable"
+            (removed)="removeSubject(subjectsArray)"
+          >
+            {{ subjectsArray.name }}
+            <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+          </mat-chip>
+          <input
+            placeholder="Add Hobbies"
+            [matChipInputFor]="chipList"
+            [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+            [matChipInputAddOnBlur]="addOnBlur"
+            (matChipInputTokenEnd)="addSubject($event)"
+          />
+        </mat-chip-list>
+      </mat-form-field>
+
+      <br />
+      <br />
+      <!-- Start form units array with first row must and dynamically add more -->
+      <mat-card formArrayName="languages">
+        <mat-card-title>Programming Languages</mat-card-title>
+        <mat-divider></mat-divider>
+
+        <!-- loop throught units -->
+        <div
+          *ngFor="
+            let language of myForm.controls.languages.controls;
+            let i = index
+          "
+        >
+          <!-- row divider show for every nex row exclude if first row -->
+          <mat-divider
+            *ngIf="myForm.controls.languages.controls.length > 1 && i > 0"
+          ></mat-divider
+          ><br />
+
+          <!-- group name in this case row index -->
+          <div [formGroupName]="i">
+            <div
+              fxLayout="row"
+              fxLayout.xs="column"
+              fxLayoutWrap
+              fxLayoutGap="3.5%"
+              fxLayoutAlign="center"
+            >
+              <!-- unit name input field -->
+              <mat-form-field fxFlex="30%">
+                <input
+                  matInput
+                  placeholder="Programming Language"
+                  formControlName="language"
+                  required
+                />
+                <button
+                  mat-button
+                  matSuffix
+                  mat-icon-button
+                  aria-label="Clear"
+                  (click)="deleteLanguage(i)"
+                >
+                  <mat-icon color="warn">close</mat-icon>
+                </button>
+              </mat-form-field>
+            </div>
+          </div>
+        </div>
+
+        <!-- New unit button -->
+        <mat-divider></mat-divider>
+        <mat-card-actions>
+          <button type="button" mat-raised-button (click)="addLanguage()">
+            <mat-icon>add box</mat-icon>
+            Add new language
+          </button>
+        </mat-card-actions>
+      </mat-card>
+      <!-- End form units array -->
+      <br />
+    </mat-card-content>
+
+    <mat-card-actions>
+      <button mat-flat-button color="primary" [disabled]="!myForm.valid">
+        Add
+      </button>
+    </mat-card-actions>
+  </form>
+</mat-card>
