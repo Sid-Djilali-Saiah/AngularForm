@@ -7,7 +7,7 @@ On peux également gérer sa liste en consultant le profil de chaque personne ai
 
 ## Bien commencer
 
-Il vous faudra un IDE tel que visual studio code ainsi que de yarn ou de mpm. 
+Il vous faudra un IDE tel que visual studio code ainsi que de yarn ou de npm. 
 
 ### Prerequisites
 
