@@ -1,27 +1,87 @@
-# Angutromb
+# PROJET TROMBINOSCOPE
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.18.
+README - Projet trombinoscope
 
-## Development server
+Bienvenue dans le projet trombinoscope ! réalisé en Angular, il permet à un utilisateur d'inscrire une personne via un formulaire, avec une photo de la personne, afin de créer une liste. 
+On peux également gérer sa liste en consultant le profil de chaque personne ainsi que la possibilité de supprmier une personne de la liste. 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Bien commencer
 
-## Code scaffolding
+Il vous faudra un IDE tel que visual studio code ainsi que de yarn ou de npm. 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Prerequisites
 
-## Build
+What things you need to install the software and how to install them
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```
+- npm 
+- npm install (dans le fichier angutromb)
 
-## Running unit tests
+```
+### Exigences du projet
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+    Reactive Forms
 
-## Running end-to-end tests
+    Utilisation de "Reactive Forms" pour la création du formulaire
+    Custom Validator
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+    Utilisation d'un "Custom Validator" pour vérifiez que l'étudiant a plus de 18 ans
+    Custom Pipe
 
-## Further help
+    Utilisation d'un "Custom pipe" pour calculer l'age d'une étudiant à partir de sa date de naissance
+    FormArray
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+    Utilisation d'un "FormArray" pour ajouter plusieurs langages de programmation
+    Animation
+
+    Utilisation d'animation lors de l'affichage de la liste des étudiants
+    Angular Material
+
+    Utilisation de Angular Material pour le design de l'application
+    Affichage des informations récupérées grâce au formulaire
+
+    Affichage des informations des étudiants dans une liste, et affichage d'un étudiant lors de la selection d'un etudiant dans la liste
+    
+### Bonus 
+     Routing
+
+    Systeme de routing, redirection vers une page dédié au à une utilisation spécifique, exemple : page form, page liste etudiants ...
+    Stockage dans le LocalStorage
+
+    Utilisation du localstorage pour stocker les étudiants et les retrouver dans la liste des étudiants
+    Possibilité d'ajouté plusieurs étudiants grâce au formulaire
+
+    Grace au localStorage il est possible d'ajouter plusieurs étudiants
+    Affichage de la liste d'étudiants
+
+    Page dédié à la liste des étudiants qui s'affiche en récuperant les informations stocké dans le localStorage
+    
+### Contenu 
+
+Le projet est constitué de 3 composants:
+
+```
+form
+```
+
+```
+homepage
+```
+```
+student-list
+```
+
+
+
+## Authors
+
+**Sid Djilali Saiah ** - 
+**Nicolas Chambon Alias Capitaine Gloomy  ** - 
+**Théo Martin  ** - 
+**François-Marie Lauze  ** - 
+
+## License
+
+Ce projet est open source, libre de droit  (ptdr)
+
+
