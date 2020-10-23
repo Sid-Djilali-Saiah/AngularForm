@@ -8,7 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "compodoc": "compodoc -p tsconfig.json -n 'Documentation technique' --includes guide --includesName Guide --language fr-FR --serve --open"
+    "compodoc": "compodoc -p tsconfig.json -n 'Documentation technique' --includes guide --includesName Guide --language fr-FR --serve --open",
+    "windoc": "compodoc -p tsconfig.json -n \"Documentation technique\" --includes guide --includesName Guide --language fr-FR --serve --open"
   },
   "private": true,
   "dependencies": {
