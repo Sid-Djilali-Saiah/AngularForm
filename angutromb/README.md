@@ -10,9 +10,8 @@ On peut également gérer sa liste en consultant le profil de chaque personne ai
 
 What things you need to install the software and how to install them
 
-```
-- npm install (dans le dossier angutromb)
-
+```shell script
+npm install (dans le dossier angutromb)
 ```
 ### Exigences du projet
 

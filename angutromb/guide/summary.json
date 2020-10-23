@@ -1,0 +1,12 @@
+[
+  {
+    "title": "Introduction",
+    "file": "introduction.md",
+    "children": [
+      {
+        "title": "Installation",
+        "file": "installation.md"
+      }
+    ]
+  }
+]

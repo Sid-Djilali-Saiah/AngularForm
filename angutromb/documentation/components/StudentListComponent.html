@@ -1,0 +1,927 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Documentation technique</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Documentation technique</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Saisissez un texte"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Composants</li>
+  <li>StudentListComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>Fichier</h3>
+</p>
+<p class="comment">
+    <code>src/app/student-list/student-list.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implémente</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Métadonnées</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-student-list</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./student-list.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./student-list.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Propriétés</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#dialog">dialog</a>
+                            </li>
+                            <li>
+                                <a href="#fadeIn">fadeIn</a>
+                            </li>
+                            <li>
+                                <a href="#newStudent">newStudent</a>
+                            </li>
+                            <li>
+                                <a href="#students">students</a>
+                            </li>
+                            <li>
+                                <a href="#visiblityState">visiblityState</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Méthodes</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#deleteStudents">deleteStudents</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#openDialogShowStudent">openDialogShowStudent</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#refreshStudents">refreshStudents</a>
+                            </li>
+                            <li>
+                                <a href="#saveStudents">saveStudents</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructeur</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(dialog: MatDialog)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Défini dans <a href="" data-line="70" class="link-to-prism">src/app/student-list/student-list.component.ts:70</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Paramètres :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Nom</td>
+                                                    <td>Type</td>
+                                                <td>Optionnel</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>dialog</td>
+                                                  
+                                                        <td>
+                                                                    <code>MatDialog</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            Non
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Méthodes
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deleteStudents"></a>
+                    <span class="name">
+                        <b>
+                            deleteStudents
+                        </b>
+                        <a href="#deleteStudents"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>deleteStudents(student: <a href="../interfaces/Student.html">Student</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Défini dans <a href="" data-line="43"
+                            class="link-to-prism">src/app/student-list/student-list.component.ts:43</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Paramètres :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Nom</td>
+                                    <td>Type</td>
+                                    <td>Optionnel</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>student</td>
+                                    <td>
+                                                <code><a href="../interfaces/Student.html" target="_self" >Student</a></code>
+                                    </td>
+
+                                    <td>
+                                        Non
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Renvoie : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Défini dans <a href="" data-line="73"
+                            class="link-to-prism">src/app/student-list/student-list.component.ts:73</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Renvoie : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="openDialogShowStudent"></a>
+                    <span class="name">
+                        <b>
+                            openDialogShowStudent
+                        </b>
+                        <a href="#openDialogShowStudent"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>openDialogShowStudent(student: <a href="../interfaces/Student.html">Student</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Défini dans <a href="" data-line="54"
+                            class="link-to-prism">src/app/student-list/student-list.component.ts:54</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Paramètres :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Nom</td>
+                                    <td>Type</td>
+                                    <td>Optionnel</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>student</td>
+                                    <td>
+                                                <code><a href="../interfaces/Student.html" target="_self" >Student</a></code>
+                                    </td>
+
+                                    <td>
+                                        Non
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Renvoie : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="refreshStudents"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            refreshStudents
+                        </b>
+                        <a href="#refreshStudents"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>refreshStudents()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Défini dans <a href="" data-line="30"
+                            class="link-to-prism">src/app/student-list/student-list.component.ts:30</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Renvoie : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="saveStudents"></a>
+                    <span class="name">
+                        <b>
+                            saveStudents
+                        </b>
+                        <a href="#saveStudents"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>saveStudents()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Défini dans <a href="" data-line="37"
+                            class="link-to-prism">src/app/student-list/student-list.component.ts:37</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Renvoie : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Propriétés
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="dialog"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            dialog</b>
+                            <a href="#dialog"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>MatDialog</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Défini dans <a href="" data-line="71" class="link-to-prism">src/app/student-list/student-list.component.ts:71</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="fadeIn"></a>
+                        <span class="name">
+                            <b>
+                            fadeIn</b>
+                            <a href="#fadeIn"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Valeur par défaut : </i><code>true</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Défini dans <a href="" data-line="24" class="link-to-prism">src/app/student-list/student-list.component.ts:24</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="newStudent"></a>
+                        <span class="name">
+                            <b>
+                            newStudent</b>
+                            <a href="#newStudent"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Défini dans <a href="" data-line="28" class="link-to-prism">src/app/student-list/student-list.component.ts:28</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="students"></a>
+                        <span class="name">
+                            <b>
+                            students</b>
+                            <a href="#students"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/Student.html" target="_self" >Student[]</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Valeur par défaut : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Défini dans <a href="" data-line="22" class="link-to-prism">src/app/student-list/student-list.component.ts:22</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="visiblityState"></a>
+                        <span class="name">
+                            <b>
+                            visiblityState</b>
+                            <a href="#visiblityState"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Valeur par défaut : </i><code>&#x27;hidden&#x27;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Défini dans <a href="" data-line="26" class="link-to-prism">src/app/student-list/student-list.component.ts:26</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, Inject} from &#x27;@angular/core&#x27;;
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from &#x27;@angular/material/dialog&#x27;;
+import { Student } from &quot;../student&quot;;
+import { trigger, state, style, transition, animate } from &#x27;@angular/animations&#x27;;
+
+
+@Component({
+  selector: &#x27;app-student-list&#x27;,
+  templateUrl: &#x27;./student-list.component.html&#x27;,
+  styleUrls: [&#x27;./student-list.component.css&#x27;],
+  animations: [
+    trigger(&#x27;visibilityChanged&#x27;, [
+      state(&#x27;hidden&#x27;, style({ opacity: 0 })),
+      state(&#x27;shown&#x27;, style({ opacity: 1 })),      
+      transition(&#x27;hidden &#x3D;&gt; shown&#x27;, animate(&#x27;1000ms&#x27;))
+    ])
+  ]
+
+})
+
+export class StudentListComponent implements OnInit {
+  students: Student[] &#x3D; [];
+
+  fadeIn &#x3D; true;
+
+  visiblityState &#x3D; &#x27;hidden&#x27;;
+
+  newStudent: string;
+
+  private refreshStudents() {
+    const students &#x3D; localStorage.getItem(&#x27;students&#x27;)
+    this.students &#x3D; students ? JSON.parse(students) : []
+    
+  }
+
+
+  saveStudents() {
+    localStorage.setItem(&#x27;students&#x27;, JSON.stringify(this.students))
+    
+  }
+
+
+  deleteStudents(student: Student) {
+    
+
+    // setTimeout(() &#x3D;&gt; (this.students &#x3D; this.students.filter(s &#x3D;&gt; s.id !&#x3D;&#x3D; student.id)), ANIMATION_TIME + 50)
+
+    this.students &#x3D; this.students.filter(s &#x3D;&gt; s.id !&#x3D;&#x3D; student.id)
+    this.saveStudents()
+  
+  }
+
+  // Ouverture du dialog détail du profil
+  openDialogShowStudent(student : Student): void {
+    const dialogRef &#x3D; this.dialog.open(StudentComponent, {
+      width:&#x27;30em&#x27;,
+      data: {
+         id : student.id,
+         avatar : student.avatar,
+         firstName : student.firstName,
+         lastName: student.lastName,
+         email : student.email,
+         gender : student.gender,
+         grade : student.grade,
+         dob : student.dob,
+         subjects: student.subjects,
+         languages: student.languages
+      }
+    });
+  }     
+  constructor(public dialog : MatDialog) {}
+
+  ngOnInit() {
+    
+    console.log(this.fadeIn)
+    // setTimeout(() &#x3D;&gt; this.refreshStudents(), ANIMATION_TIME + 50)
+    this.refreshStudents()  
+    if (this.visiblityState &#x3D;&#x3D; &quot;hidden&quot;) {
+      setTimeout(() &#x3D;&gt; this.visiblityState &#x3D; &quot;shown&quot;)
+    }
+    
+    
+  }
+
+}
+
+@Component({
+  selector: &#x27;app-student&#x27;,
+  templateUrl: &#x27;./studentDialog.html&#x27;,
+  styleUrls: [&#x27;./studentDialog.css&#x27;]
+})
+export class StudentComponent implements OnInit {
+
+  constructor(
+    public dialogRef: MatDialogRef&lt;StudentComponent&gt;,
+    @Inject(MAT_DIALOG_DATA) public data: StudentListComponent) {}
+
+    closeDialog(): void {
+    this.dialogRef.close();
+  }
+
+  ngOnInit() {
+  }
+}
+
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">
+
+&lt;!-- &lt;mat-grid-list cols&#x3D;&quot;4&quot; rowHeight&#x3D;&quot;100px&quot;&gt;
+    &lt;mat-grid-tile
+        *ngFor&#x3D;&quot;let tile of tiles&quot;
+        [colspan]&#x3D;&quot;tile.cols&quot;
+        [rowspan]&#x3D;&quot;tile.rows&quot;
+        [style.background]&#x3D;&quot;tile.color&quot;&gt;
+      {{tile.text}}
+    &lt;/mat-grid-tile&gt;
+  &lt;/mat-grid-list&gt; --&gt;
+
+
+
+  
+  &lt;mat-grid-list cols&#x3D;&quot;3&quot; rowHeight&#x3D;&quot;40em&quot; &gt;
+    &lt;mat-grid-tile *ngFor&#x3D;&quot;let student of students&quot; [@visibilityChanged]&#x3D;&quot;visiblityState&quot;&gt;
+
+      &lt;mat-card class&#x3D;&quot;example-card&quot;  &gt;
+        &lt;mat-card-header&gt;
+          &lt;mat-card-title&gt;{{student.firstName}} {{student.lastName}}&lt;/mat-card-title&gt;
+          &lt;mat-card-subtitle&gt;{{student.grade}}&lt;/mat-card-subtitle&gt;
+          
+        &lt;/mat-card-header&gt;
+        &lt;mat-divider&gt;&lt;/mat-divider&gt;
+        
+        &lt;img mat-card-image style&#x3D;&quot;margin-top: 1rem;&quot; src&#x3D;&quot;{{student.avatar}}&quot;&gt;
+        &lt;mat-card-content&gt;
+         
+        &lt;/mat-card-content&gt;
+        &lt;mat-divider&gt;&lt;/mat-divider&gt;
+        &lt;mat-card-actions&gt;            
+          &lt;button mat-button (click)&#x3D;&quot;deleteStudents(student)&quot;&gt;DELETE&lt;/button&gt;
+          &lt;button mat-button (click)&#x3D;&quot;openDialogShowStudent(student)&quot;&gt;SHOW&lt;/button&gt;
+        &lt;/mat-card-actions&gt;
+      &lt;/mat-card&gt;
+
+    &lt;/mat-grid-tile&gt;
+  
+  &lt;/mat-grid-list&gt;
+
+  &lt;div style&#x3D;&quot;margin-bottom: 50px;&quot;&gt;&lt;/div&gt;
+
+  </code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./student-list.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.GridColor{
+    background-color: pink;
+}
+
+
+.example-card {
+    max-width: 20em;
+  }
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Légende</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Elément Html</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Composant</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Elément Html avec une directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><!-- <mat-grid-list cols="4" rowHeight="100px">    <mat-grid-tile        *ngFor="let tile of tiles"        [colspan]="tile.cols"        [rowspan]="tile.rows"        [style.background]="tile.color">      {{tile.text}}    </mat-grid-tile>  </mat-grid-list> -->    <mat-grid-list cols="3" rowHeight="40em" >    <mat-grid-tile *ngFor="let student of students" [@visibilityChanged]="visiblityState">      <mat-card class="example-card"  >        <mat-card-header>          <mat-card-title>{{student.firstName}} {{student.lastName}}</mat-card-title>          <mat-card-subtitle>{{student.grade}}</mat-card-subtitle>                  </mat-card-header>        <mat-divider></mat-divider>                <img mat-card-image style="margin-top: 1rem;" src="{{student.avatar}}">        <mat-card-content>                 </mat-card-content>        <mat-divider></mat-divider>        <mat-card-actions>                      <button mat-button (click)="deleteStudents(student)">DELETE</button>          <button mat-button (click)="openDialogShowStudent(student)">SHOW</button>        </mat-card-actions>      </mat-card>    </mat-grid-tile>    </mat-grid-list>  <div style="margin-bottom: 50px;"></div>  </div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'FormComponent', 'selector': 'app-form'},{'name': 'HomepageComponent', 'selector': 'app-homepage'},{'name': 'StudentComponent', 'selector': 'app-student'},{'name': 'StudentListComponent', 'selector': 'app-student-list'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'StudentListComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">Aucun résultat matchant "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'StudentListComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
